@@ -49,9 +49,9 @@ async function updateUI(){
   const request = await fetch('/all');
   try{
     const allData = await request.json();
-    dateHolder.innerHTML = allData[allData.length - 1].date;
-    tempHolder.innerHTML = allData[allData.length - 1].temperature;
-    contentHolder.innerHTML = allData[allData.length - 1].response;
+    dateHolder.innerHTML = allData.date;
+    tempHolder.innerHTML = allData.temperature;
+    contentHolder.innerHTML = allData.response;
   }catch(error){
     console.log("error", error);
   }
